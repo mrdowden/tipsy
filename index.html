@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Tipsy - Tip Calculator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Official Bootstrap -->
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap-theme.min.css">
+    <!-- Our project CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
+                <div class="panel panel-primary">
+                    <div class="panel-body">
+                        <div class="page-header">
+                            <h1>Tipsy <small>Tip Calculator</small></h1>
+                        </div>
+                        <form id="tipsy">
+                            <div class="form-group">
+                                <label for="bill">How much was your bill?</label>
+                                <div class="currency">$</div>
+                                <input id="bill" class="number form-control" required="required" type="text" pattern="[0-9]{0,4}(\.[0-9]{1,2})?" maxlength="6" title="Please enter a number under $10,000 with an optional decimal (8888.22)">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="tip">How was your service?</label>
+                                <select id="tip" class="form-control" required="required">
+                                    <option disabled selected value>-- Choose an option --</option>
+                                    <option value="0.30">30% - Outstanding!</option>
+                                    <option value="0.20">20% - Good</option>
+                                    <option value="0.15">15% - It was okay</option>
+                                    <option value="0.10">10% - Bad</option>
+                                    <option value="0.05">5% - Terrible</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="people">How many people are sharing the bill?</label>
+                                <input id="people" class="number form-control" required="required" type="number" min="1" max="9" value="1">
+                            </div>
+
+                            <button class="btn btn-primary btn-lg btn-block">Calculate!</button>
+                        </form>
+                    </div>
+                    <div class="hidden panel-footer">
+                        <p>Tip Amount</p>
+                        <p id="tipAmount"></p>
+                        <p>each</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Official JQuery -->
+    <script src="lib/jquery/dist/jquery.min.js"></script>
+    <script src="lib/jquery-ui/jquery-ui.min.js"></script>
+    <!-- Official Bootstrap -->
+    <script src="lib/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- Our project JS -->
+    <script src="tipsy.js"></script>
+
+</body>
+
+</html>

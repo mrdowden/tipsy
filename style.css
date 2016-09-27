@@ -1,0 +1,48 @@
+html {
+    height: 100%;
+}
+
+body {
+    background-image: url(dinner.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.container {
+    margin: 2em 1em;
+}
+
+.panel {
+    background-color: #ced7ea;
+}
+
+.panel-footer {
+    text-align: center;
+    font-size: 150%;
+    font-weight: bold;
+}
+
+.panel-footer p {
+    margin-bottom: 0;
+    line-height: 100%;
+}
+
+.currency {
+    position: absolute;
+    margin: 7px 8px;
+}
+
+#tipAmount {
+    color: green;
+    font-size: 250%;
+    padding: 0.2em 0;
+}
+
+#tipAmount:before {
+    content: "$";
+}
+
+input.number {
+    text-align: right;
+}
