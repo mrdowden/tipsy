@@ -7,9 +7,20 @@ $(function() {
         var tip = parseFloat( $('#tip').val() );
         var people = parseInt( $('#people').val() );
 
-        var totalTip = Math.round( bill * tip * 100) / 100;
-        var tipAmount = Math.round( bill * tip / people * 100 ) / 100;
-        $('#tipAmount').html(tipAmount);
+        if(people > 1) {
+            $('#tipEach').show();
+            $('#totalSummary').show();
+            $('#tipSummary').removeClass('col-xs-offset-3');
+        } else {
+            $('#tipEach').hide();
+            $('#totalSummary').hide();
+            $('#tipSummary').addClass('col-xs-offset-3');
+        }
+
+        var tipAmountEach = Math.round( bill * tip / people * 100 ) / 100;
+        var totalBillEach = Math.round( bill * (1 + tip) / people * 100 ) / 100;
+        $('#tipAmount').html(tipAmountEach.toFixed(2));
+        $('#totalBill').html(totalBillEach.toFixed(2));
         $('.panel-footer').hide().removeClass('hidden').slideDown();
     });
 });

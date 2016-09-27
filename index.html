@@ -22,6 +22,7 @@
                             <h1>Tipsy <small>Tip Calculator</small></h1>
                         </div>
                         <form id="tipsy">
+                            <button type="reset" class="pull-right btn btn-default btn-xs">Reset</button>
                             <div class="form-group">
                                 <label for="bill">How much was your bill?</label>
                                 <div class="currency">$</div>
@@ -49,9 +50,21 @@
                         </form>
                     </div>
                     <div class="hidden panel-footer">
-                        <p>Tip Amount</p>
-                        <p id="tipAmount"></p>
-                        <p>each</p>
+                        <div class="row">
+                            <div id="tipSummary" class="col-xs-6">
+                                <p>Tip Amount</p>
+                                <p id="tipAmount" class="currency"></p>
+                                <p id="tipEach">each</p>
+                            </div>
+                            <div id="totalSummary" class="col-xs-6">
+                                <p>Total Bill</p>
+                                <p id="totalBill" class="currency"></p>
+                                <p>each</p>
+                            </div>
+                        </div>
+                        <div>
+                            
+                        </div>
                     </div>
                 </div>
             </div>

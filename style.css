@@ -28,21 +28,22 @@ body {
     line-height: 100%;
 }
 
-.currency {
+form .currency {
     position: absolute;
     margin: 7px 8px;
 }
 
-#tipAmount {
+p.currency {
     color: green;
     font-size: 250%;
     padding: 0.2em 0;
 }
 
-#tipAmount:before {
+p.currency::before {
     content: "$";
 }
 
 input.number {
     text-align: right;
 }
+
